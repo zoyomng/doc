@@ -1,10 +1,17 @@
-1.`~$ su`
-调出root用户时认证失败
-需要初始化root用户密码
-`~$ sudo passwd`
+# linux 常用命令
 
+1. `~$ su`
+   调出root用户时认证失败
+   需要初始化root用户密码
+   `~$ sudo passwd`
 
+2. 更改文件权限
 
+   `chmod [选项]... 八进制模式 文件...`
+
+   eg. `sudo chmod -R 777 /opt`
+
+   - -R: 递归目录下的所有文件
 
 
 3. 解压缩
@@ -71,11 +78,7 @@
    解压：sEx x FileName.*
    压缩：sEx a FileName.* FileName
 
-   
 
-   
-
-   
 
    sEx只是调用相关程序，本身并无压缩、解压功能，请注意！
 
