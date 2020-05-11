@@ -14,7 +14,7 @@ try {
 }
 ```
 
-- 
+- Intent的规范
 
 ```java
 public Intent getPdfFileIntent(File file) {
@@ -34,7 +34,7 @@ public Intent getPdfFileIntent(File file) {
 }
 ```
 
-
+- 获取assets下的文件并以文件的形式返回
 
 ```java
 	/**
