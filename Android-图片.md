@@ -18,4 +18,23 @@ public static Drawable tintIcon(@NonNull Drawable drawable, @ColorInt int tintCo
 }
 ```
 
-3. 
+3. 本地图片显示(除使用三方框架外)
+
+   ```java
+   Uri uri = Uri.fromFile(mFile);
+   imageView.setImageURI(uri);
+   ```
+
+   - Intent 传递Uri
+
+     ```java
+     //传递
+     intent.putExtra("uri", uri.toString());
+     
+     //获取
+     String uriStr = intent.getStringExtra("uri");
+     Uri uri = Uri.parse(uriStr);
+     ```
+
+     
+

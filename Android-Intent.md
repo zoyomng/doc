@@ -210,3 +210,16 @@ startActivity(intent);
 Intent intent = new Intent(android.provider.Settings.ACTION_SETTINGS);
 startActivity(intent);
 ```
+
+- 传递Uri
+
+  ```java
+  //传递
+  intent.putExtra("uri", uri.toString());
+  
+  //获取
+  String uriStr = intent.getStringExtra("uri");
+  Uri uri = Uri.parse(uriStr);
+  ```
+
+  
