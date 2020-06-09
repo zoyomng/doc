@@ -10,13 +10,15 @@
 
 2. 可改变字体颜色
 
-```xml
-<string name="score">
-    <Data>
-    	<![CDATA[评分: <font color=%1$s>%2$s</font>]]>
-    </Data>
-</string>
-```
+   ```
+   <string name="score">
+       <Data>
+       	<![CDATA[评分: <font color=%1$s>%2$s</font>]]>
+       </Data>
+   </string>
+   ```
+
+   
 
 3. 富文本
 
