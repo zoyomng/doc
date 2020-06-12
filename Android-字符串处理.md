@@ -10,12 +10,17 @@
 
 2. 可改变字体颜色
 
-   ```
+   ```xml
    <string name="score">
        <Data>
-       	<![CDATA[评分: <font color=%1$s>%2$s</font>]]>
+        	<![CDATA[总计: <font color="#C9AC51">¥%1$.2f</font>]]>
        </Data>
    </string>
+   ```
+
+   ```
+    tvCount.setText(Html.fromHtml(getString(R.string.count, 0.00)));
+    HtmlCompat.fromHtml(getString(R.string.count, 0.00),HtmlCompat.FROM_HTML_MODE_COMPACT)
    ```
 
    
