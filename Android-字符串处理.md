@@ -18,12 +18,24 @@
    </string>
    ```
 
-   ```
+   ```java
     tvCount.setText(Html.fromHtml(getString(R.string.count, 0.00)));
     HtmlCompat.fromHtml(getString(R.string.count, 0.00),HtmlCompat.FROM_HTML_MODE_COMPACT)
    ```
 
-   
+   - 字体色值可传递
+
+     ```xml
+     <string name="score">
+         <Data>
+         	<![CDATA[评分: <font color=%1$s>%2$s</font>]]>
+         </Data>
+     </string>
+     ```
+
+     
+
+     
 
 3. 富文本
 
