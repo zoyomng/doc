@@ -1,6 +1,8 @@
 ### Android-shape
 
-1. 底边
+1. 单边框
+
+   - 底边
 
    ```xml
    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">  
@@ -39,7 +41,7 @@
    </layer-list>
    ```
 
-   右边框
+   - 右边框
 
    ```xml
    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
@@ -59,7 +61,7 @@
    </layer-list>  
    ```
 
-   上边框
+   - 上边框
 
    ```xml
    <layer-list xmlns:android="http://schemas.android.com/apk/res/android">  
@@ -77,6 +79,22 @@
        </item>  
      
    </layer-list>  
+   ```
+
+
+2. 圈
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <shape xmlns:android="http://schemas.android.com/apk/res/android"
+       android:thickness="1dp"
+       android:shape="ring"
+       android:useLevel="false">
+       <size
+           android:width="8dp"
+           android:height="8dp" />
+       <solid android:color="#1788FF" />
+   </shape>
    ```
 
    
