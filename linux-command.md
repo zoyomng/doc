@@ -77,29 +77,67 @@
    .tar .tgz .tar.gz .tar.Z .tar.bz .tar.bz2 .zip .cpio .rpm .deb .slp .arj .rar .ace .lha .lzh .lzx .lzs .arc .sda .sfx .lnx .zoo .cab .kar .cpt .pit .sit .sea
    解压：sEx x FileName.*
    压缩：sEx a FileName.* FileName
+   
+   
 
-
-
-   sEx只是调用相关程序，本身并无压缩、解压功能，请注意！
-
-   gzip 命令
-   减少文件大小有两个明显的好处，一是可以减少存储空间，二是通过网络传输文件时，可以减少传输的时间。gzip 是在 Linux 系统中经常使用的一个对文件进行压缩和解压缩的命令，既方便又好用。
-
-   语法：gzip [选项] 压缩（解压缩）的文件名该命令的各选项含义如下：
-
-   -c 将输出写到标准输出上，并保留原有文件。-d 将压缩文件解压。-l 对每个压缩文件，显示下列字段：   压缩文件的大小；未压缩文件的大小；压缩比；未压缩文件的名字-r 递归式地查找指定目录并压缩其中的所有文件或者是解压缩。-t 测试，检查压缩文件是否完整。-v 对每一个压缩和解压的文件，显示文件名和压缩比。-num 用指定的数字 num 调整压缩的速度，-1 或 --fast 表示最快压缩方法（低压缩比），-9 或--best表示最慢压缩方法（高压缩比）。系统缺省值为 6。指令实例：
-
-   gzip *% 把当前目录下的每个文件压缩成 .gz 文件。gzip -dv *% 把当前目录下每个压缩的文件解压，并列出详细的信息。gzip -l *% 详细显示例1中每个压缩的文件的信息，并不解压。gzip usr.tar% 压缩 tar 备份文件 usr.tar，此时压缩文件的扩展名为.tar.gz。
-
-4. ```
+4. ```shell
    sudo apt-get update				//检测是否有更新
    sudp apt list --upgradable		//查看有哪些更新
    sudo apt-get upgrade			//更新
    sudo apt-get dist-upgrade		//系统更新
    
-   如果apt被占用，先解锁
+   sudo apt autoremove
+   sudo apt autoclean
+   
+   
+如果apt被占用，先解锁
    ps -e|grep apt-get
    sudo kill ***pid;
    ```
+   
+5. 安装
 
-5. 
+   ```shell
+   sudo apt-get install ...
+   sudo dpkg -i ...
+   ```
+
+6. Ubuntu下电脑合盖/息屏下仍运行
+
+   ```shell
+   vim /etc/systemd/logind.config
+   ```
+
+   ```shell
+   [Login]
+   #NAutoVTs=6
+   #ReserveVT=6
+   #KillUserProcesses=no
+   #KillOnlyUsers=
+   #KillExcludeUsers=root
+   #InhibitDelayMaxSec=5
+   #HandlePowerKey=poweroff
+   #HandleSuspendKey=suspend
+   #HandleHibernateKey=hibernate
+   HandleLidSwitch=ignore
+   #HandleLidSwitchExternalPower=suspend
+   #HandleLidSwitchDocked=ignore
+   #PowerKeyIgnoreInhibited=no
+   #SuspendKeyIgnoreInhibited=no
+   #HibernateKeyIgnoreInhibited=no
+   #LidSwitchIgnoreInhibited=yes
+   #HoldoffTimeoutSec=30s
+   
+   ```
+
+   - HandleLidSwitch=ignore 设置成上述（如果息屏后不运行设置为：HandleLidSwitch=suspend）
+
+   - 设置后重启，或者如下
+
+      ```
+     
+      ```
+
+     
+
+   
