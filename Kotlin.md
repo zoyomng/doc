@@ -79,6 +79,10 @@ it 的值感到困惑。
 
 
 
+![img](https://upload-images.jianshu.io/upload_images/6202959-757d95d7a54de330.png?imageMogr2/auto-orient/strip|imageView2/2/format/webp)
+
+
+
 
 
 4. Kotlin Android Extensions(省去 findViewById() --> 查找控件)
