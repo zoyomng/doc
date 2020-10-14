@@ -97,5 +97,28 @@
    </shape>
    ```
 
+3. 单边框(另一种写法)
+
+   ```xml
+   <?xml version="1.0" encoding="utf-8"?>
+   <layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+       android:paddingStart="20dp"
+       android:paddingEnd="20dp">
+       <item>
+           <shape>
+               <solid android:color="@android:color/white" />
+           </shape>
+       </item>
    
+       <item
+           android:height="1dp"
+           android:gravity="bottom"
+           android:left="12dp"
+           android:right="12dp">
+           <color android:color="@color/lineColor" />
+       </item>
+   </layer-list>
+   ```
+
+   - 好处: 可以留出边框 居 边界的一段距离 , 即底边框不是填充底边界的
 
