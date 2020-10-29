@@ -90,16 +90,19 @@
    sudo apt autoclean
    
    
+   ```
+
 如果apt被占用，先解锁
    ps -e|grep apt-get
    sudo kill ***pid;
-   ```
-   
+
+
+
 5. 安装
 
    ```shell
-   sudo apt-get install ...
-   sudo dpkg -i ...
+sudo apt-get install ...
+sudo dpkg -i ...
    ```
 
 6. Ubuntu下电脑合盖/息屏下仍运行
@@ -136,7 +139,7 @@
 
       ```shell
      service systemd-logind restart
-      ```
+     ```
 
 7. 更改文件权限
 
@@ -145,3 +148,13 @@
    eg. `sudo chmod -R 777 /opt`
 
     -R: 递归目录下的所有文件
+   
+8. 开启SSH远程连接
+
+   ```
+   sudo apt-get install openssh-server
+   sudo ps -e | grep ssh
+   sudo service ssh start
+   ```
+   
+   
