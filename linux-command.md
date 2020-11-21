@@ -157,4 +157,10 @@ sudo dpkg -i ...
    sudo service ssh start
    ```
    
+9. debian
+
+   ```shell
+   dpkg -l  #查询已安装应用
+   ```
+
    
