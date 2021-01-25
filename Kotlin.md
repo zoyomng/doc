@@ -119,7 +119,20 @@ it 的值感到困惑。
        ```kotlin
         class ViewHolder(override val containerView: View) : RecyclerView.ViewHolder(containerView), LayoutContainer {
         		...
-           }
+        }
        ```
 
-       
+5. ```kotlin
+   /**
+    * @JvmOverloads:指示Kotlin编译器为这个函数生成替代默认参数值的重载
+    * 如果一个方法有N个参数，其中M个参数有默认值，则会产生M个重载
+    * 对应Java中重载,eg.自定义控件中有多个构造方法重载
+    */
+   class CustomView @JvmOverloads constructor(
+       context: Context,
+       attrs: AttributeSet? = null,
+       defStyleAttr: Int = 0
+   ) :View(context, attrs, defStyleAttr) {
+   ```
+
+6. 
