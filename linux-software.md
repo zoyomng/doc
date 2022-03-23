@@ -35,18 +35,30 @@
 
 10. 有道词典
 
-10. tmux
+10. tmux : 多窗口命令行界面
 
     ```shell
+    sudo apt-get install tmux
     tmux
     ```
     
-    ctrl +b -->%
+    ctrl +b -->%  ：竖屏分割
     
-    ctrl +b-->"
+    ctrl +b-->"    ：横屏分割
     
-    ctrl +b-->d
+    ctrl +b-->d  ：取消分割
     
-10. 
+    ctrl +b-->→ ：选择分割
+    
+10. fzf ：索引搜索
 
+10. fish : 命令行
+
+    ```shell
+    sudo apt-get install fish
+    fish
+    ```
+    
+    
+    
     
