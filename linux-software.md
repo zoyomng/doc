@@ -35,4 +35,18 @@
 
 10. 有道词典
 
+10. tmux
+
+    ```shell
+    tmux
+    ```
+    
+    ctrl +b -->%
+    
+    ctrl +b-->"
+    
+    ctrl +b-->d
+    
+10. 
+
     
