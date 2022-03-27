@@ -59,6 +59,10 @@
     fish
     ```
     
-    
-    
+14. lantern : deepin 下打不开
+
+    ```shell
+    sudo apt-get install libappindicator3-1
+    ```
+
     

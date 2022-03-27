@@ -163,4 +163,17 @@ sudo dpkg -i ...
    dpkg -l  #查询已安装应用
    ```
 
-   
+10. rm: 无法删除'start360safe.sh': 不允许的操作
+
+   ```shell
+   lattr start360safe.sh     #查看文件属性
+   ```
+
+   - 执行后如果显示有 “i”属性，（表示只读）则表示该文件加锁无法删除或修改权限
+
+   ```shell
+   chattr -R -i start360safe.sh   #去除文件“只读”属性，—R是递归适用于目录
+   rm start360safe.sh
+   ```
+
+11. 
